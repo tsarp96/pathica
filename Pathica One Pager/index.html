@@ -18,7 +18,7 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Pathica</title>
+    <title>Pathica: Find Your Path</title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
@@ -27,7 +27,8 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
@@ -50,7 +51,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/pathica-logo.png" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo_v2.png" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +98,7 @@
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
-                        <div class="image-container">
+                        <div id="desktop-header"class="image-container">
                             <img class="img-fluid" src="images/header-teamwork.svg" alt="alternative">
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
@@ -107,54 +108,164 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-
-    <!-- Customers -->
-    <div class="slider-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5>Destekçilerimiz</h5>
-                    
-                    <!-- Image Slider -->
+    <!-- STATİSTİCS -->
+    <div class="container">
+        <h2 style="text-align:center"> </h2>
+        <h2 style="text-align:center">Statistics</h2>
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                                <!-- Image Slider -->
                     <div class="slider-container">
-                        <div class="swiper-container image-slider">
+                        <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="image-container">
-                                        <img class="img-responsive sponsor" src="images/girvak-logo-v2.png" alt="alternative">
+                                    <div class="statcard">
+                                        <h4 class="card-title" style="text-align:center">Strong onboarding improves new hire retention by 82%</h4>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="image-container">
-                                        <img class="img-responsive sponsor" src="images/startersland.png" alt="alternative">
+                                    <div class="statcard">
+                                        <h4 class="card-title" style="text-align:center">Strong onboarding improves new hire retention by 82%</h4>
                                     </div>
                                 </div>
-                            
                                 <div class="swiper-slide">
-                                    <div class="image-container">
-                                        <img class="img-responsive sponsor" src="images/bibolu.svg" alt="alternative">
+                                    <div class="statcard">
+                                        <h4 class="card-title" style="text-align:center">The cost of losing a new employee within the first 12 month equals 2 years of salary.</h4>
                                     </div>
                                 </div>
-
-                                <div class="swiper-slide">
-                                    <div class="image-container">
-                                        <img class="img-responsive sponsor" src="images/boun.png" alt="alternative">
-                                    </div>
-                                </div>
-                            
                             </div> <!-- end of swiper-wrapper -->
                         </div> <!-- end of swiper container -->
                     </div> <!-- end of slider-container -->
-                    <!-- end of image slider -->
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <div class="statcard">
+                    <h4 class="card-title" style="text-align:center">The cost of losing a new employee within the first 12 month equals 2 years of salary.</h4>
+                    <div id="desktop-show" class="chart-container" style="position: relative; height:100%; width:100%">
+                        <canvas id="desktop1Chart"></canvas>
+                    </div>
+                    <div id="mobile-show" class="chart-container" style="position: relative; height:100%; width:100%">
+                        <canvas width="1000" height="1000" id="mobile1Chart"></canvas>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+    <script>
+        var d1c = document.getElementById('desktop1Chart').getContext('2d');
+        var desktop1Chart = new Chart(d1c, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['0','1st Quarter', '2nd Quarter', '3th Quarter', '1 YEAR', '5th Quarter', '6th Quarter', '7th Quarter', '2 YEAR'],
+                datasets: [{
+                    label: 'First 1 Year Employee',
+                    backgroundColor: '#6677cc',
+                    borderColor: '#6677cc',
+                    data: [0,2, 8, 15, 26]
+                },{
+                    label: 'Second 1 Year Employee',
+                    backgroundColor: '#6677cc',
+                    borderColor: '#6677cc',
+                    data: [0,0,0,0,0,2, 8, 15, 26]
+                },{
+                    label: 'Total Work of 1 Year Employees',
+                    backgroundColor: '#2929cc',
+                    borderColor: '#2929cc',
+                    data: [0,2, 8, 15, 26,26,28,36,51,74]
+                },{
+                    label: '2 Years Employee Efficiency',
+                    backgroundColor: '#141466',
+                    borderColor: '#141466',
+                    data: [0,2, 8, 15, 26, 38, 50, 62, 74]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+            }
+        });
+        var m1c = document.getElementById('mobile1Chart').getContext('2d');
+        var mobile1Chart = new Chart(m1c, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['1st 1 Year Employee Efficiency','2nd 1 Year Employee Efficiency','2 Years Employee Efficiency'],
+                datasets: [{
+                    data: [24,24,52],
+                    backgroundColor: ["#141466", "#2929cc","#6677cc"],
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                responsive: true,
+                maintainAspectRatio: 1,
+                    title: {
+                        display: false,
+                        text: 'Predicted world population (millions) in 2050'
+                    }
+            }
+        });
+    </script>
+
+    
+    <!-- Details 2 -->
+    <div class="basic-2" style="background: #dadae6;margin-top:20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/firsty.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Problem Statement</h2>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <div class="media-body">Pathica helps you design and track a 360-degree onboarding program for your talents in all stages varying from pre-onboarding to crossboarding. Candidates and employees would be trained & tracked on the digital platform based on a process developed in line with organization- and position-specific needs.</div>
+                            </li>
+                        </ul>
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">How do we know?</a>
+                    </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of slider-1 -->
-    <!-- end of customers -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 2 -->
 
+    
 
-    <!-- Services -->
+    <!-- Details 1 -->
+    <div class="basic-1" style="background: #dadae6;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Solution</h2>
+                        <p>Candidates would be trained & tracked on digital platforms before being hired based on a training process developed in line with organization- and position-specific needs.</p>
+                 <a class="btn-solid-reg page-scroll" href="#features">HOW?</a>                    
+                    </div> <!-- end of text-container
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">SOLUTION</a>                    
+                     -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/secondy.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of details 1 -->
+
+    <!-- PRODUCT -->
     <div id="services" class="cards-1">
         <div class="container">
             <div class="row">
@@ -181,7 +292,7 @@
                         <img class="card-image" src="images/services-icon-2.svg" alt="alternative">
                         <div class="card-body">
                             <h4 class="card-title">Onboarding</h4>
-                            <p>360-Degree onboarding program covers all the needs your new hires based on your expectations and needs.</p>
+                            <p>Apply an effective introduction program, let your new hires start doing their work from day one and ensure that everyone is on the same page from the beginning.</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -200,57 +311,53 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
-    <!-- end of services -->
+    <!-- end of PRODUCT -->
 
-    <!-- Details 2 -->
-    <div class="basic-2">
+    <!-- FEATURES -->
+    <div id="features" class="cards-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-2-office-team-work.svg" alt="alternative">
-                    </div> <!-- end of image-container -->
+                <div class="col-lg-12">
+                    <h2>Features</h2>
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Get your Candidates, New Hires & Employees Enrolled - but?</h2>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <div class="media-body">Organizations face loss of productivity and effective working-time primarily due to lack of adequate new hire onboarding.</div>
-                            </li>
-                        </ul>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">How do we know?</a>
-                    </div> <!-- end of text-container -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/CHECKLİST1.png"></img>
+                    <p class="feature-text">Create a task list for yourself, use our modular template to plan your new hire’s onboarding process </p>
+                </div> <!-- end of col -->
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/document2.png"></img>
+                    <p class="feature-text">Track new hire forms. Upload Documents</p>
+                </div> <!-- end of col -->
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/skills2.png"></img>
+                    <p class="feature-text">Identify skill gaps and prapare customized training for your new hires based on their development areas.</p>
+                </div> <!-- end of col -->
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/schedule2.png"></img>
+                    <p class="feature-text">Create a schedule for team introductions. Send event invitations to other employees. 
+ </p>
+                </div> <!-- end of col -->
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/job2.png"></img>
+                    <p class="feature-text">Inform your new hires about their job descriptions and duties.
+</p>
+                </div> <!-- end of col -->
+                <div class="col-xs-6 col-md-4">
+                    <img class="feature-icon" src="images/CHECKLİST1.png"></img>
+                    <p class="feature-text">Sent a first week to do list to your new hires.
+</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of details 2 -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of Features -->
 
 
-    <!-- Details 1 -->
-    <div class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Design And Plan Your Business Growth Steps</h2>
-                        <p>Candidates would be trained & tracked on digital platforms before being hired based on a training process developed in line with organization- and position-specific needs.</p>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">SOLUTION</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-1-office-worker.svg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of details 1 -->
+
 
     
-
     <!-- Details Lightboxes -->
     <!-- Details Lightbox 1 -->
 	<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
@@ -298,10 +405,10 @@
                     <!-- Card-->
                     <div class="card">
                         <div class="card-body">
-                            <div class="card-title">AFFILIATE MARKETING</div>
+                            <div class="card-title">Affiliate Marketing</div>
                             <div class="card-subtitle">Just to see what can be achieved</div>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+                                <a class="btn-solid-reg page-scroll" href="#request">More Information</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -310,10 +417,10 @@
                     <!-- Card-->
                     <div class="card">
                         <div class="card-body">
-                            <div class="card-title">SUBSCRIPTION CONTRACTS</div>
+                            <div class="card-title">Subscription Contracts</div>
                             <div class="card-subtitle">Very appropriate for the short term</div>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+                                <a class="btn-solid-reg page-scroll" href="#request">More Information</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -325,10 +432,10 @@
                             <p class="best-value">Success based</p>
                         </div>
                         <div class="card-body">
-                            <div class="card-title">REFERRAL PAYMENTS</div>
+                            <div class="card-title">Referral Payments</div>
                             <div class="card-subtitle">Must have for large companies</div>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#request">REQUEST</a>
+                                <a class="btn-solid-reg page-scroll" href="#request">More Information</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -381,6 +488,7 @@
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Tuna Sarp</strong></p>
                         <p class="job-title">Machine Learning</p>
+                        <a title="Tuna Sarp Linkedln Account" href="https://www.linkedin.com/in/atakan-%C3%BClgen-791445117/"> LinkedIn </a>
 
                         </span> <!-- end of social-icons -->
                     </div> <!-- end of team-member -->
@@ -392,7 +500,8 @@
                             <img class="img-fluid" src="images/team-member-2.svg" alt="alternative">
                         </div> <!-- end of image wrapper -->
                         <p class="p-large"><strong>Atakan Ülgen</strong></p>
-                        <p class="job-title">Web Developer</p>
+                        <p class="job-title">Product Developer</p>
+                        <a title="Atakan Ülgen Linkedln Account" href="https://www.linkedin.com/in/atakan-%C3%BClgen-791445117/"> LinkedIn </a>
 
                         </span> <!-- end of social-icons -->
                     </div> <!-- end of team-member -->
@@ -407,10 +516,9 @@
     <!-- Request -->
     <div id="request" class="form-1">
         <div class="container">
-        <h2 style="text-align:center;">REQUEST</h2>
             <div class="row">
-                <div class="col-lg-12">
-
+                <div class="col-lg-6">
+                    <h2 style="text-align:center;">REQUEST</h2> 
                     <!-- Request Form -->
                     <div class="form-container">
                         <form id="requestForm" data-toggle="validator" data-focus="false">
@@ -432,14 +540,14 @@
                             <div class="form-group">
                                 <select class="form-control-select" id="rselect" required>
                                     <option class="select-option" value="" disabled selected>Interested in...</option>
-                                    <option class="select-option" value="Personal Loan">Starter</option>
-                                    <option class="select-option" value="Car Loan">Medium</option>
-                                    <option class="select-option" value="House Loan">Complete</option>
+                                    <option class="select-option" value="Personal Loan">Pre Onboarding</option>
+                                    <option class="select-option" value="Car Loan">Onboarding</option>
+                                    <option class="select-option" value="House Loan">Crossboarding</option>
                                 </select>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group checkbox">
-                                <input type="checkbox" id="rterms" value="Agreed-to-Terms" name="rterms" required>I agree with Evolo's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms & Conditions</a>
+                                <input type="checkbox" id="rterms" value="Agreed-to-Terms" name="rterms" required>I agree with Pathica's stated Privacy Policy and Terms & Conditions
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
@@ -453,39 +561,84 @@
                     <!-- end of request form -->
 
                 </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <h2 style="text-align:center">CONTACT</h2>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="address">Don't hesitate to give us a call or send us a contact form message.</li>
+                        <li><a class="turquoise" href="mailto:office@evolo.com">follow@pathica.org</a></li>
+                    </ul>
+                     <div class="map-responsive">
+                        <div class="mapouter"><div class="iframe-container"><iframe style="width:100%;height:300px;" id="gmap_canvas" src="https://maps.google.com/maps?q=kollektif%20house&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+                    </div>
+                </div> <!-- end of col -->
+                              
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of form-1 -->
     <!-- end of request -->
 
-
-    <!-- Video -->
-
-
-
     <!-- Contact -->
     <div id="contact" class="form-2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2>CONTACT</h2>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="address">Don't hesitate to give us a call or send us a contact form message.</li>
-                        <li><a class="turquoise" href="tel:0905543508395">554 350 83 95</a></li>
-                        <li><a class="turquoise" href="mailto:office@evolo.com">follow@pathica.org</a></li>
-                    </ul>
-                </div> <!-- end of col -->
+     
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="map-responsive">
-                        <div class="mapouter"><div class="gmap_canvas"><iframe width="" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kollektif%20house&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://usave.co.uk">usave</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:572px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:572px;}</style></div>
-                    </div>
+                    
+    <!-- Customers -->
+    <div class="slider-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5>Destekçilerimiz</h5>
+                    
+                    <!-- Image Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive sponsor" src="images/girvak-logo-v2.png" alt="alternative">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive sponsor" src="images/startersland.png" alt="alternative">
+                                    </div>
+                                </div>
+                            
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive sponsor" src="images/bibolu.svg" alt="alternative">
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="image-container">
+                                        <img class="img-responsive sponsor" src="images/boun.png" alt="alternative">
+                                    </div>
+                                </div>
+                            
+                            </div> <!-- end of swiper-wrapper -->
+                        </div> <!-- end of swiper container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of image slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of customers -->
+
+
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of form-2 -->
     <!-- end of contact -->
+
+    
 
     <!-- Copyright -->
     <div class="copyright">

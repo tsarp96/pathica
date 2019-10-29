@@ -31,10 +31,10 @@ Table Of Contents:
 
 /*****************************************
 Colors:
-- Backgrounds - turquoise #00bfd8
+- Backgrounds - turquoise #4C0FD6
 - Backgrounds - blue #0079f9
 - Backgrounds - light gray #f7fcfd
-- Buttons, bullets, icons, links - turquoise #00bfd8
+- Buttons, bullets, icons, links - turquoise #4C0FD6
 - Cards border, inputs border - light gray #c4d8dc
 - Text headers, navbar links - black #393939
 - Text body - black #626262
@@ -116,7 +116,7 @@ a:hover {
 }
 
 a.turquoise {
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 
 a.white {
@@ -138,15 +138,15 @@ a.white {
 }
 
 .turquoise {
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 
 .btn-solid-reg {
 	display: inline-block;
 	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-	border: 0.125rem solid #00bfd8;
+	border: 0.125rem solid #4C0FD6;
 	border-radius: 2rem;
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	font: 700 0.75rem/0 "Raleway", sans-serif;
 	text-decoration: none;
@@ -155,16 +155,16 @@ a.white {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 	text-decoration: none;
 }
 
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-	border: 0.125rem solid #00bfd8;
+	border: 0.125rem solid #4C0FD6;
 	border-radius: 2rem;
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	font: 700 0.75rem/0 "Raleway", sans-serif;
 	text-decoration: none;
@@ -173,24 +173,24 @@ a.white {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 	text-decoration: none;
 }
 
 .btn-outline-reg {
 	display: inline-block;
 	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-	border: 0.125rem solid #00bfd8;
+	border: 0.125rem solid #4C0FD6;
 	border-radius: 2rem;
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 	font: 700 0.75rem/0 "Raleway", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-reg:hover {
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	text-decoration: none;
 }
@@ -198,17 +198,17 @@ a.white {
 .btn-outline-lg {
 	display: inline-block;
 	padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-	border: 0.125rem solid #00bfd8;
+	border: 0.125rem solid #4C0FD6;
 	border-radius: 2rem;
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 	font: 700 0.75rem/0 "Raleway", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-lg:hover {
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	text-decoration: none;
 }
@@ -216,17 +216,17 @@ a.white {
 .btn-outline-sm {
 	display: inline-block;
 	padding: 1rem 1.625rem 0.875rem 1.625rem;
-	border: 0.125rem solid #00bfd8;
+	border: 0.125rem solid #4C0FD6;
 	border-radius: 2rem;
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 	font: 700 0.625rem/0 "Raleway", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-sm:hover {
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	text-decoration: none;
 }
@@ -374,9 +374,9 @@ input[type='checkbox'] {
 	display: inline-block;
 	width: 100%;
 	height: 3.125rem;
-	border: 1px solid #00bfd8;
+	border: 1px solid #4C0FD6;
 	border-radius: 1.5rem;
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	color: #fff;
 	font: 700 0.75rem/1.75rem "Raleway", sans-serif;
 	cursor: pointer;
@@ -385,7 +385,7 @@ input[type='checkbox'] {
 
 .form-control-submit-button:hover {
 	background-color: transparent;
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 
 /* Form Success And Error Message Formatting */
@@ -492,7 +492,22 @@ input[type='checkbox'] {
 	-ms-transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
 	transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
 }
-
+#features {
+	background: #dadae6;
+}
+.feature-icon{
+	width: 100px;
+}
+.statcard {
+	max-width: 100%;
+	margin-right: 8px;
+	margin-left: 8px;
+	margin-bottom: 15px;
+	padding: 3.25rem 2rem 2rem 2rem;
+	border: 1px solid #c4d8dc;
+	border-radius: 0.5rem;
+	background: transparent;
+}
 /* animate in */
 .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
 	opacity: 1;
@@ -602,7 +617,7 @@ input[type='checkbox'] {
 	width: 1rem;
 	height: 1rem;
 	border-radius: 100%;
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
@@ -639,7 +654,7 @@ input[type='checkbox'] {
 /*     03. Navigation     */
 /**************************/
 .navbar-custom {
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
 	font: 600 0.875rem/0.875rem "Raleway", sans-serif;
 	transition: all 0.2s;
@@ -715,7 +730,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover .item-text {
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 
 .navbar-custom .dropdown-items-divide-hr {
@@ -884,7 +899,7 @@ input[type='checkbox'] {
 }
 
 .basic-2 .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	line-height: 1.375rem;
 }
 
@@ -931,7 +946,7 @@ input[type='checkbox'] {
 	margin-bottom: 1.25rem;
 	margin-left: 0;
 	border: 0;
-	background-color: #00bfd8;
+	background-color: #4C0FD6;
 	text-align: left;
 }
 
@@ -940,7 +955,7 @@ input[type='checkbox'] {
 }
 
 .lightbox-basic .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	line-height: 1.375rem;
 }
 
@@ -963,7 +978,7 @@ input[type='checkbox'] {
 }
 
 .lightbox-basic .btn-solid-reg.mfp-close:hover {
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 /* end of signup Button */
 
@@ -973,7 +988,7 @@ input[type='checkbox'] {
 	width: auto;
 	height: auto;
 	margin-left: 0.375rem;
-	color: #00bfd8;
+	color: #4C0FD6;
 	opacity: 1;
 }
 
@@ -1047,7 +1062,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .value {
-	color: #00bfd8;
+	color: #4C0FD6;
 	font-weight: 700;
 	font-size: 3.5rem;
 	line-height: 4rem;
@@ -1056,7 +1071,7 @@ input[type='checkbox'] {
 
 .cards-2 .card .currency {
 	margin-right: 0.375rem;
-	color: #00bfd8;
+	color: #4C0FD6;
 	font-size: 1.5rem;
 	vertical-align: 56%;
 }
@@ -1078,7 +1093,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	line-height: 1.375rem;
 }
 
@@ -1118,7 +1133,7 @@ input[type='checkbox'] {
     position: relative;
 	width: 13.75rem;
 	padding: 0.3125rem 0 0.3125rem 4.125rem;
-    background-color: #00bfd8;
+    background-color: #4C0FD6;
 	color: #fff;
     -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
     -ms-transform: rotate(45deg) translate3d(0, 0, 0);
@@ -1145,7 +1160,7 @@ input[type='checkbox'] {
 }
 
 .form-1 .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	line-height: 1.375rem;
 }
 
@@ -1210,7 +1225,7 @@ input[type='checkbox'] {
 	width: 4.75rem;
 	height: 4.75rem;
 	border-radius: 50%;
-	background: #00bfd8;
+	background: #4C0FD6;
 	animation: pulse-border 1500ms ease-out infinite;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -1227,7 +1242,7 @@ input[type='checkbox'] {
 	width: 4.375rem;
 	height: 4.375rem;
 	border-radius: 50%;
-	background: #00bfd8;
+	background: #4C0FD6;
 	transition: all 200ms;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -1392,7 +1407,7 @@ input[type='checkbox'] {
 }
 
 .basic-4 .fa-stack-2x {
-	color: #00bfd8;
+	color: #4C0FD6;
 	transition: all 0.2s ease;
 }
 
@@ -1436,7 +1451,7 @@ input[type='checkbox'] {
 .form-2 .list-unstyled .fab {
 	margin-right: 0.5rem;
 	font-size: 0.875rem;
-	color: #00bfd8;
+	color: #4C0FD6;
 }
 
 .form-2 .list-unstyled .fa-phone {
@@ -1479,7 +1494,7 @@ input[type='checkbox'] {
 }
 
 .footer .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	font-size: 0.5rem;
 	line-height: 1.375rem;
 }
@@ -1500,7 +1515,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-2x {
-	color: #00bfd8;
+	color: #4C0FD6;
 	transition: all 0.2s ease;
 }
 
@@ -1541,7 +1556,7 @@ a.back-to-top {
 	width: 2.625rem;
 	height: 2.625rem;
 	border-radius: 1.875rem;
-	background: #00bfd8 url("../images/up-arrow.png") no-repeat center 47%;
+	background: #4C0FD6 url("../images/up-arrow.png") no-repeat center 47%;
 	background-size: 1.125rem 1.125rem;
 	text-indent: -9999px;
 }
@@ -1593,7 +1608,7 @@ a:hover.back-to-top {
 }
 
 .ex-basic-2 .list-unstyled .fas {
-	color: #00bfd8;
+	color: #4C0FD6;
 	font-size: 0.5rem;
 	line-height: 1.375rem;
 }
@@ -1628,8 +1643,28 @@ a:hover.back-to-top {
 /*     20. Media Queries     */
 /*****************************/	
 /* Min-width width 768px */
+@media (max-width: 767px){
+	#desktop-header{
+		display: block;
+	}
+	#desktop-show{
+		display: none;
+	}
+	#mobile-show{
+		display: block;
+	}
+}
+
 @media (min-width: 768px) {
-	
+	#desktop-header{
+		display: none;
+	}
+	#desktop-show{
+		display: block;
+	}
+	#mobile-show{
+		display: none;
+	}
 	/* General Styles */
 	.p-heading {
 		width: 85%;
@@ -1749,8 +1784,7 @@ a:hover.back-to-top {
 	.navbar-custom {
 		padding: 0rem 1.5rem 0rem 2rem;
 		box-shadow: none;
-        background: transparent;
-        background-color: #00bfd8;
+        background-color:#4B50CE;
 	}
 	
 	.navbar-custom .navbar-nav {
@@ -1773,7 +1807,7 @@ a:hover.back-to-top {
 	.navbar-custom.top-nav-collapse {
         padding: 0rem 1.5rem 0rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
-		background-color: #00bfd8;
+		background-color: #4C0FD6;
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
@@ -1819,7 +1853,7 @@ a:hover.back-to-top {
 	}
 	
 	.navbar-custom .fa-stack-2x {
-		color: #00bfd8;
+		color: #4C0FD6;
 		transition: all 0.2s ease;
 	}
 	
@@ -1833,11 +1867,11 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom .fa-stack:hover .fa-stack-1x {
-		color: #00bfd8;
+		color: #4C0FD6;
 	}
 
 	.navbar-custom.top-nav-collapse .fa-stack-2x {
-		color: #00bfd8;
+		color: #4C0FD6;
 	}
 	
 	.navbar-custom.top-nav-collapse .fa-stack-1x {
@@ -1863,7 +1897,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		background: url('../images/header-background.jpg') center center no-repeat;
+		background: url('../images/header.png') center center no-repeat;
 		background-size: cover; 
 	}
 
@@ -2023,13 +2057,11 @@ a:hover.back-to-top {
 	/* Navigation */
 	.navbar-custom {
 		padding: 0rem 5rem 0rem 5rem;
-		background-color: #00bfd8;
-	}
+		background-color:#4B50CE;	}
 
 	.navbar-custom.top-nav-collapse {
         padding: 0rem 5rem 0rem 5rem;
-        background-color: #00bfd8;
-	}
+		background-color:#4B50CE;	}
 	/* end of navigation */
 
 	
